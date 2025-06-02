@@ -69,12 +69,12 @@ def recipe_tokenizer(sentence):
     sentence = ''.join([char if char not in string.punctuation or char == ',' else ' ' for char in sentence]).lower()
     listofwords = sentence.split()
     listoflemmatized_words = [lemmatizer.lemmatize(word) for word in listofwords if word not in ENGLISH_STOP_WORDS and word != '']
-
     return listoflemmatized_words
 
 def load_embeddings_and_vectorizer():
     with open("model/combined_embeddings.pkl", 'rb') as f:
         combined_embeddings = pickle.load(f)
+    # Ensure recipe_tokenizer is available before loading vectorizer
     with open('model/tfidf_vectorizer (1).pkl', 'rb') as f:
         vectorizer = pickle.load(f)
     return combined_embeddings, vectorizer
@@ -110,4 +110,3 @@ def find_similar_recipes(sampled_data, user_input, num_similar=5):
         print(f"Recipe: {recipe}, Similarity Score: {score:.4f}")
 
     return recipies
-

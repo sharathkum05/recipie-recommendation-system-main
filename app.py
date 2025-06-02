@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from model import nlp_model
+from model.nlp_model import recipe_tokenizer
 import pickle, string
 import nltk
 from nltk.corpus import stopwords
@@ -43,13 +44,6 @@ ENGLISH_STOP_WORDS = stopwords.words('english')
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
-
-def recipe_tokenizer(sentence):
-    sentence = ''.join([char if char not in string.punctuation or char == ',' else ' ' for char in sentence]).lower()
-    listofwords = sentence.split()
-    listoflemmatized_words = [lemmatizer.lemmatize(word) for word in listofwords if word not in ENGLISH_STOP_WORDS and word != '']
-
-    return listoflemmatized_words
 
 
 @app.route("/")
