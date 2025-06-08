@@ -3,6 +3,7 @@
 # from gensim.models import Word2Vec
 import pickle, string
 import dill
+import model.nlp_model
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import string
@@ -73,11 +74,16 @@ def recipe_tokenizer(sentence):
     return listoflemmatized_words
 
 def load_embeddings_and_vectorizer():
+    # Ensure dill can resolve custom functions like recipe_tokenizer
+    import model.nlp_model  # Forces dill to locate functions in module scope
+    dill._dill._reverse_typemap['ClassType'] = type
+
     with open("model/combined_embeddings.pkl", 'rb') as f:
         combined_embeddings = dill.load(f)
-    # Ensure recipe_tokenizer is available before loading vectorizer
+
     with open('model/tfidf_vectorizer (1).pkl', 'rb') as f:
         vectorizer = dill.load(f)
+
     return combined_embeddings, vectorizer
 
 def find_similar_recipes(sampled_data, user_input, num_similar=5):
