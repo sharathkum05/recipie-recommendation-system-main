@@ -1,1 +1,1 @@
-web: bash -c "python model/nlp_model.py && gunicorn app:app"
+web: gunicorn app:app
