@@ -6,11 +6,13 @@ An intelligent AI-powered recipe recommendation system that suggests recipes bas
 
 <div align="center">
   
-  https://github.com/sharathkum05/recipie-recommendation-system-main/assets/journal.mp4
-  
-  *🎥 Watch the Recipe Recommendation System in action!*
-  
-  > **Note:** If the video doesn't play above, you can [download and view the demo video here](./journal.mp4)
+### 🎥 Watch the Recipe Recommendation System in Action!
+
+[![Demo Video](https://img.shields.io/badge/▶️_Watch_Demo_Video-4285F4?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1i-HixxuG51qA5Qd3hrWC_rI4aVusxPuB/view?usp=sharing)
+
+**[Click the button above to watch the full demo video on Google Drive](https://drive.google.com/file/d/1i-HixxuG51qA5Qd3hrWC_rI4aVusxPuB/view?usp=sharing)**
+
+*See how the AI-powered recipe recommendation system finds perfect recipes based on your ingredients!*
   
 </div>
 
