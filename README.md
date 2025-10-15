@@ -4,9 +4,15 @@ An intelligent AI-powered recipe recommendation system that suggests recipes bas
 
 ## 📹 Demo
 
-https://github.com/user-attachments/assets/journal.mp4
-
-> **Note:** Watch the demo video above to see the Recipe Recommendation System in action!
+<div align="center">
+  
+  https://github.com/sharathkum05/recipie-recommendation-system-main/assets/journal.mp4
+  
+  *🎥 Watch the Recipe Recommendation System in action!*
+  
+  > **Note:** If the video doesn't play above, you can [download and view the demo video here](./journal.mp4)
+  
+</div>
 
 ## ✨ Features
 
